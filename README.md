@@ -16,22 +16,28 @@ Dataset Support: Supports datasets like Cora and CiteSeer for document classific
 
 ## Usage
 
-1. Feature Selection
+1. Training and Evaluation
 
-Run the feature selection script to preprocess the data and extract important features:
+Run the corresponding notebook to preprocess the data, apply feature selection, train the GNN model, and evaluate its performance.
 
-python feature_selection.py
+For the Cora dataset, use:
+```
+rf-cora2.ipynb
+```
 
-This step saves a new .pt file containing the filtered features.
+For the CiteSeer dataset, use:
+```
+RF_citeseer.ipynb
+```
 
-2. Training
+Each notebook contains the end-to-end pipeline, including data loading, feature selection, model training, and evaluation.
 
-Run the training script with the updated dataset:
+2. Feature Selection
 
-python train.py
-
-This will train the GNN models (with and without feature selection) and log the performance metrics.
+Random Forest is used to identify the most relevant features for training the GNN model. The selected features are saved into a processed dataset file for further use.
 
 3. Model Evaluation
 
-Performance metrics (e.g., accuracy, precision, recall, F1-score) are displayed during training and saved for each run.
+Performance metrics (e.g., accuracy, precision, recall, F1-score) are displayed during training and logged at the end of each run.
+
+
