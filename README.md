@@ -13,3 +13,25 @@ Baseline Models: Implements Graph Convolutional Networks (GCNs) and GraphSAGE as
 Performance Comparison: Evaluates the impact of feature selection on training metrics (accuracy, precision, recall, F1-score).
 
 Dataset Support: Supports datasets like Cora and CiteSeer for document classification tasks.
+
+## Usage
+
+1. Feature Selection
+
+Run the feature selection script to preprocess the data and extract important features:
+
+python feature_selection.py
+
+This step saves a new .pt file containing the filtered features.
+
+2. Training
+
+Run the training script with the updated dataset:
+
+python train.py
+
+This will train the GNN models (with and without feature selection) and log the performance metrics.
+
+3. Model Evaluation
+
+Performance metrics (e.g., accuracy, precision, recall, F1-score) are displayed during training and saved for each run.
